@@ -17,11 +17,11 @@ $$
 - **MAX**: The maximum possible pixel value of the image. For an 8-bit grayscale image, `MAX = 255`.
 - **MSE**: The Mean Squared Error between the original and distorted images, defined as:
 
-  $$
-  \text{MSE} = \frac{1}{mn} \sum_{i=0}^{m-1} \sum_{j=0}^{n-1} \left[ I(i,j) - K(i,j) \right]^2
-  $$
+$$
+\text{MSE} = \frac{1}{mn} \sum_{i=0}^{m-1} \sum_{j=0}^{n-1} \left[ I(i,j) - K(i,j) \right]^2  
+$$
 
-  where:
+where:
   - \( I(i, j) \) is the pixel value at position \( (i, j) \) in the original image.
   - \( K(i, j) \) is the pixel value at position \( (i, j) \) in the distorted image.
   - \( m \) and \( n \) are the height and width of the images, respectively.
@@ -51,9 +51,9 @@ $$
 
 - **\( C_1 \) and \( C_2 \)**: Constants added to stabilize the division, preventing the denominator from approaching zero. These constants are defined as:
 
-  $$
-  C_1 = (K_1 \cdot L)^2, \quad C_2 = (K_2 \cdot L)^2
-  $$
+$$
+C_1 = (K_1 \cdot L)^2, \quad C_2 = (K_2 \cdot L)^2
+$$
 
   where:
   - \( L \) is the dynamic range of the pixel values (e.g., \( L = 255 \) for 8-bit images).
