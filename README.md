@@ -74,4 +74,41 @@ Entropy measures the uncertainty or information content of the pixel distributio
 
 ### Histogram Analysis
 
+Histogram analysis is a technique used to examine the distribution of pixel intensities in an image. By analyzing the histogram of both the original image and the stego-image, we can determine whether there are significant differences in their pixel value distributions. This analysis helps identify any abnormal gaps or the emergence of multiple peak points in the histogram.
+
+#### Purpose
+
+The main objectives of histogram analysis include:
+
+- **Detecting Differences**: Assessing the histogram distributions of the original and stego-images to identify any noticeable differences that may indicate the presence of hidden information.
+- **Identifying Anomalies**: Spotting irregularities such as gaps in the histogram, which may suggest distortions or artifacts introduced during the embedding process.
+- **Finding Multiple Peaks**: Detecting multiple peak points in the histogram, which could indicate that the image has been altered significantly, potentially revealing the use of steganography.
+
+#### Input and Output
+
+- **Input**: The analysis takes an image as input, which can either be the original image or the stego-image.
+- **Output**: The output is the histogram of the input image, visualizing the distribution of pixel values. This histogram provides valuable insights into the image's characteristics.
+
+By performing histogram analysis, we can effectively evaluate the impact of steganographic methods on the original image and assess the quality and security of the stego-image.
+
+
 ### Complexity Analysis
+
+Complexity analysis is a method used to evaluate the security of encrypted images by examining their visual characteristics. This analysis focuses on detecting the presence of outlines or contours within the encrypted image. If prominent outlines are detected, it may indicate that the encryption method is insecure, as it can potentially reveal sensitive information about the underlying content. Conversely, a secure encryption method should produce results that appear random and chaotic.
+
+#### Purpose
+
+The main objectives of complexity analysis include:
+
+- **Detecting Outlines**: Assessing the encrypted image for visible contours that could compromise the confidentiality of the information. The presence of such outlines suggests that the encryption method is not robust enough to obscure the original content.
+- **Evaluating Security**: Ensuring that the output images from the encryption process exhibit a high level of complexity and randomness, which is characteristic of a secure encryption method.
+
+#### Methodology
+
+To effectively conduct complexity analysis, the following considerations must be taken into account:
+
+- **Threshold Adjustment**: Manual adjustment of the threshold is required to avoid resulting images from appearing entirely black or entirely white. Setting the threshold appropriately is crucial to accurately assess the complexity of the image without losing significant details.
+- **Visual Inspection**: The output images should be visually inspected to determine the presence of outlines or patterns that might indicate weaknesses in the encryption.
+
+By performing complexity analysis, we can better understand the effectiveness of the encryption method and ensure that sensitive information remains protected from potential attacks.
+
