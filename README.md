@@ -48,6 +48,8 @@ $$
 
 The SSIM index measures the similarity between two images in terms of luminance, contrast, and structure. Its value ranges from \(-1\) to \(1\), where \(1\) indicates perfect similarity.
 
+---
+
 ### Image Entropy for Grayscale Images
 
 $$
@@ -68,7 +70,7 @@ $$
 
 Entropy measures the uncertainty or information content of the pixel distribution in an image. When all gray levels have an equal probability of occurrence (i.e., the image has maximum uncertainty), the entropy value is maximized.
 
-
+---
 
 ## Some of analysis tools:
 
@@ -91,6 +93,7 @@ The main objectives of histogram analysis include:
 
 By performing histogram analysis, we can effectively evaluate the impact of steganographic methods on the original image and assess the quality and security of the stego-image.
 
+---
 
 ### Complexity Analysis
 
