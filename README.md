@@ -28,21 +28,8 @@ where:
 
 The PSNR value is typically used to evaluate the quality of compressed or reconstructed images. A higher PSNR value indicates better image quality and less distortion.
 
-
-* Structural Similarity Index Measure (SSIM)
-
-- **\( \text{SSIM}(x, y) \)**: The SSIM value between two images \( x \) and \( y \).
-- **\( \mu_x \) and \( \mu_y \)**: The mean intensity values of images \( x \) and \( y \), respectively.
-- **\( \sigma_x^2 \) and \( \sigma_y^2 \)**: The variances of images \( x \) and \( y \), respectively.
-- **\( \sigma_{xy} \)**: The covariance between images \( x \) and \( y \).
-
+---
 ### Structural Similarity Index Measure (SSIM)
-
-- **SSIM(x, y)**: The SSIM value between two images \( x \) and \( y \).
-- **\( \mu_x \) and \( \mu_y \)**: The mean intensity values of images \( x \) and \( y \), respectively.
-- **\( \sigma_x^2 \) and \( \sigma_y^2 \)**: The variances of images \( x \) and \( y \), respectively.
-- **\( \sigma_{xy} \)**: The covariance between images \( x \) and \( y \).
-
 The SSIM formula is defined as:
 
 $$
@@ -61,14 +48,12 @@ $$
 
 The SSIM index measures the similarity between two images in terms of luminance, contrast, and structure. Its value ranges from \(-1\) to \(1\), where \(1\) indicates perfect similarity.
 
-
-* Information Entropy
+### Image Entropy for Grayscale Images
 
 $$
 H = - \sum_{i=0}^{L-1} p_i \cdot \log_2(p_i)
 $$
 
-### Image Entropy for Grayscale Images
 
 - **\( H \)**: The image entropy.
 - **\( L \)**: The number of gray levels in the grayscale image (usually, \( L = 256 \)).
@@ -87,6 +72,6 @@ Entropy measures the uncertainty or information content of the pixel distributio
 
 ## Some of analysis tools:
 
-* Histogram Analysis
+### Histogram Analysis
 
-* Complexity Analysis
+### Complexity Analysis
