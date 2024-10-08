@@ -4,37 +4,41 @@ In this project, we collect lots of evaluation metrics or tools for evaluating t
 
 Some of metrics are provided:
 
-* PSNR
+### Peak Signal-to-Noise Ratio (PSNR)
+
+- **PSNR**: The PSNR value measures the quality of the reconstructed or compressed image relative to the original image. It is expressed in decibels (dB).
 
 The formula for PSNR is defined as:
+
 $$
 \text{PSNR} = 10 \cdot \log_{10} \left( \frac{{\text{MAX}^2}}{{\text{MSE}}} \right)
 $$
 
-$$
-\text{MSE} = \frac{1}{mn} \sum_{i=0}^{m-1} \sum_{j=0}^{n-1} \left[ I(i,j) - K(i,j) \right]^2
-$$
+- **MAX**: The maximum possible pixel value of the image. For an 8-bit grayscale image, `MAX = 255`.
+- **MSE**: The Mean Squared Error between the original and distorted images, defined as:
+
+  $$
+  \text{MSE} = \frac{1}{mn} \sum_{i=0}^{m-1} \sum_{j=0}^{n-1} \left[ I(i,j) - K(i,j) \right]^2
+  $$
 
   where:
   - \( I(i, j) \) is the pixel value at position \( (i, j) \) in the original image.
   - \( K(i, j) \) is the pixel value at position \( (i, j) \) in the distorted image.
   - \( m \) and \( n \) are the height and width of the images, respectively.
 
-
-- **\( \text{PSNR} \)**: The PSNR value measures the quality of the reconstructed or compressed image relative to the original image. It is expressed in decibels (dB).
-- **\( \text{MAX} \)**: The maximum possible pixel value of the image. For an 8-bit grayscale image, \( \text{MAX} = 255 \).
-- **\( \text{MSE} \)**: The Mean Squared Error between the original and distorted images, defined as:
-
-  $$
-  \text{MSE} = \frac{1}{mn} \sum_{i=0}^{m-1} \sum_{j=0}^{n-1} \left[ I(i,j) - K(i,j) \right]^2
-  $$
-
-
 The PSNR value is typically used to evaluate the quality of compressed or reconstructed images. A higher PSNR value indicates better image quality and less distortion.
+
 
 * Structural Similarity Index Measure (SSIM)
 
 - **\( \text{SSIM}(x, y) \)**: The SSIM value between two images \( x \) and \( y \).
+- **\( \mu_x \) and \( \mu_y \)**: The mean intensity values of images \( x \) and \( y \), respectively.
+- **\( \sigma_x^2 \) and \( \sigma_y^2 \)**: The variances of images \( x \) and \( y \), respectively.
+- **\( \sigma_{xy} \)**: The covariance between images \( x \) and \( y \).
+
+### Structural Similarity Index Measure (SSIM)
+
+- **SSIM(x, y)**: The SSIM value between two images \( x \) and \( y \).
 - **\( \mu_x \) and \( \mu_y \)**: The mean intensity values of images \( x \) and \( y \), respectively.
 - **\( \sigma_x^2 \) and \( \sigma_y^2 \)**: The variances of images \( x \) and \( y \), respectively.
 - **\( \sigma_{xy} \)**: The covariance between images \( x \) and \( y \).
@@ -56,6 +60,7 @@ $$
   - \( K_1 \) and \( K_2 \) are small constants (typically \( K_1 = 0.01 \) and \( K_2 = 0.03 \)).
 
 The SSIM index measures the similarity between two images in terms of luminance, contrast, and structure. Its value ranges from \(-1\) to \(1\), where \(1\) indicates perfect similarity.
+
 
 * Information Entropy
 
