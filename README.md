@@ -2,7 +2,7 @@
 
 In this project, we collect lots of evaluation metrics or tools for evaluating the performance of Steganography methods or information hiding techniques.
 
-Some of metrics are provided:
+Some of the metrics are provided:
 
 ### Peak Signal-to-Noise Ratio (PSNR)
 
