@@ -2,7 +2,7 @@
 
 In this project, we collect lots of evaluation metrics or tools for evaluating the performance of Steganography methods or information hiding techniques.
 
-Some of metrics are provided:
+Some of the metrics are provided:
 
 ### Peak Signal-to-Noise Ratio (PSNR)
 
@@ -61,9 +61,9 @@ $$
 - **\( L \)**: The number of gray levels in the grayscale image (usually, \( L = 256 \)).
 - **\( p_i \)**: The probability of occurrence of the \( i \)-th gray level, which is the proportion of pixels having the \( i \)-th gray value in the entire image:
 
-  $$
-  p_i = \frac{n_i}{N}
-  $$
+$$
+p_i = \frac{n_i}{N}
+$$
 
 - **\( n_i \)**: The number of pixels having the \( i \)-th gray value.
 - **\( N \)**: The total number of pixels in the image.
@@ -72,7 +72,7 @@ Entropy measures the uncertainty or information content of the pixel distributio
 
 ---
 
-## Some of analysis tools:
+## Some of the analysis tools:
 
 ### Histogram Analysis
 
@@ -115,3 +115,37 @@ To effectively conduct complexity analysis, the following considerations must be
 
 By performing complexity analysis, we can better understand the effectiveness of the encryption method and ensure that sensitive information remains protected from potential attacks.
 
+---
+
+### NPCR and UACI
+NPCR and UACI are critical security metrics in the context of encrypted images used for data hiding. These metrics help assess the sensitivity of a proposed method to small changes in the original image, highlighting the method's resilience to differential attacks.
+
+The **Number of Pixels Change Rate (NPCR)** measures the percentage of pixels that change between two images, typically the original and the encrypted or modified version. A high NPCR value, typically close to 100\%, indicates that a large portion of the pixels has been altered, which is crucial for encryption-based schemes that aim to prevent any meaningful patterns from being easily detected. NPCR is calculated using the following formula:
+
+$$
+NPCR = \frac{\sum_{i=0}^{v-1} \sum_{j=0}^{t-1} d(i,j)}{v \times t} \times 100
+$$
+
+where \( v \) and \( t \) represent the dimensions of the image, and \( d(i,j) \) is a binary function defined as:
+
+$$
+d(i,j) = 
+\begin{cases} 
+1, & \text{if } p(i,j) \neq e(i,j), \\
+0, & \text{if } p(i,j) = e(i,j),
+\end{cases}
+$$
+
+Here, \( p(i,j) \) and \( e(i,j) \) are the pixel values at position \( (i,j) \) in the original and encrypted images, respectively.
+
+On the other hand, the **Unified Average Changing Intensity (UACI)** evaluates the average intensity difference between the original and altered images. UACI provides insight into the strength of changes across pixel values, with higher values indicating a more substantial difference in pixel intensities. This metric is handy in assessing the robustness of the encryption or data-hiding scheme against subtle attacks. UACI is computed as follows:
+
+$$
+UACI = \frac{100}{v \times t} \times \sum_{i=0}^{v-1} \sum_{j=0}^{t-1} \frac{| p(i,j) - e(i,j) |}{255}
+$$
+
+where \( p(i,j) \) and \( e(i,j) \) are the pixel values of the original and encrypted images, respectively, and the difference is normalized by dividing by 255, the maximum possible pixel value for an 8-bit image.
+
+In summary, consistently high NPCR and UACI values demonstrate the ability of an encryption method to obscure the original content of an image effectively, making the method robust against attacks that rely on detecting small differences between images.
+
+---
